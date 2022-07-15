@@ -8,7 +8,7 @@ const data = {
       ip: "ip44",
       zasilanie: "12v",
       src: "img/1.jpg",
-      qty: 2,
+      qty: 0,
     },
     {
       id: 2,
@@ -18,6 +18,7 @@ const data = {
       ip: "ip20",
       zasilanie: "24v",
       src: "img/2.jpg",
+      qty: 0,
     },
     {
       id: 3,
@@ -27,6 +28,7 @@ const data = {
       ip: "ip20",
       zasilanie: "24v",
       src: "img/2.jpg",
+      qty: 0,
     },
   ],
 };
