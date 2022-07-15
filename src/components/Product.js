@@ -6,6 +6,8 @@ export default function Product(props) {
     <div>
       <h3>{product.nazwa}</h3>
       <button onClick={() => onAdd(product)}>DODAJ</button>
+
     </div>
+
   );
 }
