@@ -9,8 +9,15 @@ function App() {
   const { product } = data;
   const [filteredList, setFilteredList] = useState(product);
   const [selectedIp, setSelectedIp] = useState("");
+  const [inputQty, setInputQty] = useState("");
 
   const [cartItems, setCartItems] = useState([]);
+
+
+  const handleChangeQty = value =>{
+    setInputQty(value);
+  }
+
 
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
@@ -37,11 +44,11 @@ function App() {
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty } : x
+          x.id === product.id ? { ...exist, qty: inputQty } : x
         )
       );
     } else {
-      setCartItems([...cartItems, { ...product, qty: product.qty }]);
+      setCartItems([...cartItems, { ...product, qty: inputQty }]);
     }
   };
   return (
@@ -54,6 +61,8 @@ function App() {
           product={filteredList}
           handleIpChange={handleIpChange}
           selectedIp={selectedIp}
+          inputQty = {inputQty}
+          handleChangeQty = {handleChangeQty}
         ></Main>
         <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
       </div>
