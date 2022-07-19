@@ -1,8 +1,19 @@
 import React from "react";
 import Product from "./Product";
+import Zasilacz from "./Zasilacz";
 
 export default function Main(props) {
-  const { product, onAdd, handleIpChange, selectedIp, inputQty, handleChangeQty } = props;
+  const {
+    product,
+    zasilacz,
+    onAdd,
+    handleIpChange,
+    selectedIp,
+    inputQty,
+    handleChangeQty,
+    button,
+    cartItems,
+  } = props;
   return (
     <div>
       Konfigurator Taśm Led
@@ -17,13 +28,35 @@ export default function Main(props) {
         type="number"
         placeholder="Wpisz ilość..."
         value={inputQty}
-        onChange={e=> handleChangeQty(e.target.value)}
+        onChange={(e) => handleChangeQty(e.target.value)}
       ></input>
       <div className="cartproducts">
         {product.map((index) => (
-          <Product key={index.id} product={index} onAdd={onAdd}></Product>
+          <Product
+            key={index.id}
+            product={index}
+            onAdd={onAdd}
+            button={button}
+          ></Product>
         ))}
       </div>
+      {cartItems.length === 0 ? (
+        ""
+      ) : (
+        <>
+          <div>Wybierz zasilacz: </div>
+          <div className="cartproducts">
+            {zasilacz.map((index) => (
+              <Zasilacz
+                key={index.id}
+                zasilacz={index}
+                onAdd={onAdd}
+                button={button}
+              ></Zasilacz>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

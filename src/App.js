@@ -3,24 +3,30 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Koszyk from "./components/Koszyk";
 import data from "./data";
+import data_2 from "./data_2";
 import { useState, useEffect } from "react";
 
 function App() {
   const { product } = data;
+  const { zasilacz } = data_2;
   const [filteredList, setFilteredList] = useState(product);
   const [selectedIp, setSelectedIp] = useState("");
   const [inputQty, setInputQty] = useState("");
 
+  const[button, setButton] = useState("disabled")
+
   const [cartItems, setCartItems] = useState([]);
 
   const handleChangeQty = (value) => {
-    if(value > 0 && value < 6 ){
+    if (value > 0 && value < 6) {
       setInputQty(value);
-    }else{
-      alert("Taśma nie może mieć wiecej niż 5 m")
+      setButton("");
+    } else {
+      alert("Taśma nie może mieć wiecej niż 5 m");
     }
-
   };
+
+
 
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
@@ -45,14 +51,18 @@ function App() {
   //Dodawanie do tablicy (koszykowej)
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: inputQty } : x
-        )
-      );
+    if ((inputQty === "")) {
+      alert("Przed dodaniem podaj Długość taśmy");
     } else {
-      setCartItems([...cartItems, { ...product, qty: inputQty }]);
+      if (exist) {
+        setCartItems(
+          cartItems.map((x) =>
+            x.id === product.id ? { ...exist, qty: inputQty } : x
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...product, qty: inputQty }]);
+      }
     }
   };
   return (
@@ -61,12 +71,15 @@ function App() {
       <div className="App">
         <Header></Header>
         <Main
+          button={button}
           onAdd={onAdd}
           product={filteredList}
+          zasilacz={zasilacz}
           handleIpChange={handleIpChange}
           selectedIp={selectedIp}
           inputQty={inputQty}
           handleChangeQty={handleChangeQty}
+          cartItems={cartItems}
         ></Main>
         <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
       </div>

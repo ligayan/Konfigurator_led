@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Product(props) {
-  const { product, onAdd } = props;
+  const { product, onAdd, button } = props;
   return (
     <div className="product">
       <div>
@@ -11,7 +11,7 @@ export default function Product(props) {
         <hr></hr>
         <h2>Stopień ochrony: {product.ip}</h2>
         <hr></hr>
-        <button onClick={() => onAdd(product)}>DODAJ</button>
+        <button disabled={button} onClick={() => onAdd(product)}>DODAJ</button>
       </div>
     </div>
   );
