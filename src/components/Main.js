@@ -19,7 +19,7 @@ export default function Main(props) {
         value={inputQty}
         onChange={e=> handleChangeQty(e.target.value)}
       ></input>
-      <div>
+      <div className="cartproducts">
         {product.map((index) => (
           <Product key={index.id} product={index} onAdd={onAdd}></Product>
         ))}

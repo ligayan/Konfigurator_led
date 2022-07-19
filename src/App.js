@@ -13,11 +13,14 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
+  const handleChangeQty = (value) => {
+    if(value > 0 && value < 6 ){
+      setInputQty(value);
+    }else{
+      alert("Taśma nie może mieć wiecej niż 5 m")
+    }
 
-  const handleChangeQty = value =>{
-    setInputQty(value);
-  }
-
+  };
 
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
@@ -31,6 +34,7 @@ function App() {
 
   const handleIpChange = (event) => {
     setSelectedIp(event.target.value);
+    setCartItems([]);
   };
 
   useEffect(() => {
@@ -61,8 +65,8 @@ function App() {
           product={filteredList}
           handleIpChange={handleIpChange}
           selectedIp={selectedIp}
-          inputQty = {inputQty}
-          handleChangeQty = {handleChangeQty}
+          inputQty={inputQty}
+          handleChangeQty={handleChangeQty}
         ></Main>
         <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
       </div>

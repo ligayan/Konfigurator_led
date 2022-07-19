@@ -4,10 +4,10 @@ export default function Koszyk(props) {
   const { cartItems, onAdd } = props;
   return (
     <>
-      <div>Koszyk</div>
+      <div>Produkty W konfiguracji</div>
       <div>{cartItems.length === 0 && <div>Nie wybrano</div>}</div>
       {cartItems.map((item) => (
-        <div>
+        <div className="cart">
           <div>{item.nazwa}</div>
           <div>Ilość:{item.qty}</div>
         </div>
