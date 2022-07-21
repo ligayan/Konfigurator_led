@@ -2,6 +2,7 @@ const data = {
   product: [
     {
       id: 1,
+      typ: "tasma",
       indeks: "I00086883",
       identyfikator: "P3014-60-20-NW-5",
       nazwa: "Taśma LED P3014x60 6W 730lm/m 4000K IP20 RA80 5m INQ",
@@ -9,9 +10,11 @@ const data = {
       zasilanie: "12v",
       src: "img/1.jpg",
       qty: 0,
+      wspolczynnik:1.8,
     },
     {
       id: 2,
+      typ: "tasma",
       indeks: "I00086885",
       identyfikator: "P3014-60-20-NW-20",
       nazwa: "Taśma LED P3014x60 6W 730lm/m 4000K IP20 RA80 20m INQ",
@@ -19,9 +22,11 @@ const data = {
       zasilanie: "24v",
       src: "img/2.jpg",
       qty: 0,
+      wspolczynnik:1.8,
     },
     {
       id: 3,
+      typ: "tasma",
       indeks: "I00086885",
       identyfikator: "P3014-60-20-NW-20",
       nazwa: "Taśma LED P3014x60 6W 730lm/m 4000K IP20 RA80 20m INQ",
@@ -29,6 +34,7 @@ const data = {
       zasilanie: "24v",
       src: "img/2.jpg",
       qty: 0,
+      wspolczynnik:1.8,
     },
   ],
 };

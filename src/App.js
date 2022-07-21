@@ -13,20 +13,20 @@ function App() {
   const [selectedIp, setSelectedIp] = useState("");
   const [inputQty, setInputQty] = useState("");
 
-  const[button, setButton] = useState("disabled")
+  const [button, setButton] = useState("disabled");
 
   const [cartItems, setCartItems] = useState([]);
+  const [wymaganaMoc, setwymaganaMoc] = useState("");
 
   const handleChangeQty = (value) => {
-    if (value > 0 && value < 6) {
+    if (value > 0 && value < 501) {
       setInputQty(value);
       setButton("");
+      setCartItems([]);
     } else {
       alert("Taśma nie może mieć wiecej niż 5 m");
     }
   };
-
-
 
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
@@ -51,39 +51,49 @@ function App() {
   //Dodawanie do tablicy (koszykowej)
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-    if ((inputQty === "")) {
+
+    if ((product.typ === "tasma")) {
+      setwymaganaMoc(inputQty * product.wspolczynnik * 1.2);
+    }
+
+    if (inputQty === "") {
       alert("Przed dodaniem podaj Długość taśmy");
     } else {
       if (exist) {
         setCartItems(
           cartItems.map((x) =>
-            x.id === product.id ? { ...exist, qty: inputQty } : x
+            x.id === product.id
+              ? { ...exist, qty: product.typ === "zasilacz" ? 1 : inputQty }
+              : x
           )
         );
       } else {
-        setCartItems([...cartItems, { ...product, qty: inputQty }]);
+        if (cartItems.length === 0 || product.typ === "zasilacz") {
+          setCartItems([
+            ...cartItems,
+            { ...product, qty: product.typ === "zasilacz" ? 1 : inputQty },
+          ]);
+        }
       }
     }
   };
   return (
-    console.log(cartItems),
-    (
-      <div className="App">
-        <Header></Header>
-        <Main
-          button={button}
-          onAdd={onAdd}
-          product={filteredList}
-          zasilacz={zasilacz}
-          handleIpChange={handleIpChange}
-          selectedIp={selectedIp}
-          inputQty={inputQty}
-          handleChangeQty={handleChangeQty}
-          cartItems={cartItems}
-        ></Main>
-        <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
-      </div>
-    )
+    <div className="App">
+      <Header></Header>
+      <Main
+        wymaganaMoc={wymaganaMoc}
+        button={button}
+        onAdd={onAdd}
+        product={filteredList}
+        zasilacz={zasilacz}
+        handleIpChange={handleIpChange}
+        selectedIp={selectedIp}
+        inputQty={inputQty}
+        handleChangeQty={handleChangeQty}
+        cartItems={cartItems}
+      ></Main>
+      <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
+    </div>
   );
 }
 

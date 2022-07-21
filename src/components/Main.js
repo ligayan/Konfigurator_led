@@ -13,6 +13,7 @@ export default function Main(props) {
     handleChangeQty,
     button,
     cartItems,
+    wymaganaMoc,
   } = props;
   return (
     <div>
@@ -26,7 +27,7 @@ export default function Main(props) {
       <div>Długość:</div>
       <input
         type="number"
-        placeholder="Wpisz ilość..."
+        placeholder="Długość taśmy w cm..."
         value={inputQty}
         onChange={(e) => handleChangeQty(e.target.value)}
       ></input>
@@ -40,13 +41,14 @@ export default function Main(props) {
           ></Product>
         ))}
       </div>
+      {/* <div>Wymagana moc: {wymaganaMoc}</div> */}
       {cartItems.length === 0 ? (
         ""
       ) : (
         <>
           <div>Wybierz zasilacz: </div>
           <div className="cartproducts">
-            {zasilacz.map((index) => (
+            {zasilacz.filter(moc => moc.moc < wymaganaMoc).map((index) => (
               <Zasilacz
                 key={index.id}
                 zasilacz={index}

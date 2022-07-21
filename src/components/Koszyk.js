@@ -9,7 +9,8 @@ export default function Koszyk(props) {
       {cartItems.map((item) => (
         <div className="cart">
           <div>{item.nazwa}</div>
-          <div>Ilość:{item.qty}</div>
+          <div>{item.qty}{item.typ === "tasma" ? " cm" : " szt"}</div>
+          {console.log(item.typ)}
         </div>
       ))}
     </>
