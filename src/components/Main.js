@@ -48,17 +48,31 @@ export default function Main(props) {
         <>
           <div>Wybierz zasilacz: </div>
           <div className="cartproducts">
-            {zasilacz.filter(moc => moc.moc < wymaganaMoc).map((index) => (
-              <Zasilacz
-                key={index.id}
-                zasilacz={index}
-                onAdd={onAdd}
-                button={button}
-              ></Zasilacz>
-            ))}
+            {zasilacz
+              .filter((moc) => moc.moc < wymaganaMoc)
+              .map((index) => (
+                <Zasilacz
+                  key={index.id}
+                  zasilacz={index}
+                  onAdd={onAdd}
+                  button={button}
+                ></Zasilacz>
+              ))}
           </div>
         </>
       )}
+      <form action="https://inergia.pl/configurator_products/action/addtocart" target="_blank" method="post" >
+        {cartItems.map((id, key) => (
+          <>
+          <input type="hidden" name={'products['+ key +'][id]'} value={id.identyfikator}></input>
+          <input type="hidden" name={'products['+ key +'][qty]'} value={id.qty} ></input>
+
+          </>
+      ))}
+        <input type="submit"></input>
+      </form>
+
+
     </div>
   );
 }
