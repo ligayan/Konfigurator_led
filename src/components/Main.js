@@ -61,16 +61,7 @@ export default function Main(props) {
           </div>
         </>
       )}
-      <form action="https://inergia.pl/configurator_products/action/addtocart" target="_blank" method="post" >
-        {cartItems.map((id, key) => (
-          <>
-          <input type="hidden" name={'products['+ key +'][id]'} value={id.identyfikator}></input>
-          <input type="hidden" name={'products['+ key +'][qty]'} value={id.qty} ></input>
 
-          </>
-      ))}
-        <input type="submit"></input>
-      </form>
 
 
     </div>
