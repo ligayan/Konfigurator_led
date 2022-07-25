@@ -111,7 +111,7 @@ function App() {
         handleChangeQty={handleChangeQty}
         cartItems={cartItems}
       ></Main>
-      <Koszyk onAdd={onAdd} cartItems={cartItems}></Koszyk>
+      <Koszyk onAdd={onAdd} cartItems={cartItems} key={922123}></Koszyk>
     </div>
   );
 }
