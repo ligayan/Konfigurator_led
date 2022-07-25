@@ -11,7 +11,9 @@ export default function Product(props) {
         <hr></hr>
         <h2>Stopień ochrony: {product.ip}</h2>
         <hr></hr>
-        <button disabled={button} onClick={() => onAdd(product)}>DODAJ</button>
+        <button className="button" disabled={button} onClick={() => onAdd(product)}>Wybierz</button>
+        <div></div>
+        <br></br>
       </div>
     </div>
   );

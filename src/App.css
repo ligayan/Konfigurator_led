@@ -1,4 +1,45 @@
-button{
+:root {
+  --select-border: #777;
+  --select-focus: #61dafb;
+  --select-arrow: var(--select-border);
+  --select-hover:red;
+
+}
+
+.alert{
+  width: 60%;
+  text-align: center;
+  font-size: x-large;
+  padding: 10%;
+  border: solid 1px black;
+  margin: auto;
+}
+
+.filters input, select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+}
+
+input{
+  padding: 10px;
+}
+
+.filter_header{
+  width: 20%;
+}
+
+
+button, .button{
   background-color: green;
   padding: 10px;
   color: white;
@@ -6,25 +47,70 @@ button{
   border-radius: 5px;
   cursor: pointer;
 }
-button:disabled{
-  background-color: lightgrey;
+
+button:hover{
+  transition: all 1s;
+  background-color:#61dafb;
 
 }
 
+.flex{
+  display: flex;
+  padding: 10px;
+}
+
+.filters{
+  display: block;
+  align-items: left;
+  text-align: left;
+}
+
+button:disabled{
+  background-color: lightgrey;
+  cursor: not-allowed;
+
+
+}
+
+.main_header{
+  font-size: x-large;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.cartflex{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+.cart{
+  display: block;
+  margin: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 30px rgb(91, 115, 182);
+
+}
 
 .cartproducts{
   display: flex;
   justify-content: space-around;
-
-
+  text-align: center;
+  flex-wrap: wrap;
 }
+
+
 .product{
 
   margin: 10px;
   padding: 0px 20px;
   box-shadow: 5px 5px 10px 4px gray;
   border-radius: 10px;
-  
+  max-width: 33%;
+
 
 }
 hr{
@@ -34,13 +120,14 @@ hr{
 
 .cart{
   align-items: flex-start;
-  width: 50%;
-  display: flex;
+  max-width: 30%;
+  display: block;
   justify-content: space-around;
 }
 
 .App {
   text-align: center;
+  margin: 20px 0px;
 }
 
 .App-logo {

@@ -14,23 +14,37 @@ export default function Main(props) {
     button,
     cartItems,
     wymaganaMoc,
+    selectedV,
+    handleVChange
   } = props;
   return (
-    <div>
-      Konfigurator Taśm Led
-      <div>Filtrowanie po IP:</div>
-      <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
-        <option value=""></option>
-        <option value="ip44">IP44</option>
-        <option value="ip20">IP20</option>
-      </select>
-      <div>Długość:</div>
-      <input
-        type="number"
-        placeholder="Długość taśmy w cm..."
-        value={inputQty}
-        onChange={(e) => handleChangeQty(e.target.value)}
-      ></input>
+    <div class="filters">
+      <div class="flex">
+        <div class="filter_header">Filtrowanie po IP:</div>
+        <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
+          <option value="">wybierz IP</option>
+          <option value="ip44">IP44</option>
+          <option value="ip20">IP20</option>
+        </select>
+      </div>
+      <div class="flex">
+        <div class="filter_header">Rodzaj zaislania:</div>
+        <select id="ip-input" value={selectedV} onChange={handleVChange}>
+          <option value="">wybierz zasilanie</option>
+          <option value="12v">12V</option>
+          <option value="24v">24V</option>
+        </select>
+      </div>
+      <div class="flex">
+        <div class="filter_header">Długość:</div>
+        <input
+          type="number"
+          placeholder="Długość taśmy w cm..."
+          value={inputQty}
+          onChange={(e) => handleChangeQty(e.target.value)}
+        ></input>
+      </div>
+      {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null}
       <div className="cartproducts">
         {product.map((index) => (
           <Product
@@ -41,12 +55,12 @@ export default function Main(props) {
           ></Product>
         ))}
       </div>
-      {/* <div>Wymagana moc: {wymaganaMoc}</div> */}
+      <div>Wymagana moc: {wymaganaMoc}</div>
       {cartItems.length === 0 ? (
         ""
       ) : (
         <>
-          <div>Wybierz zasilacz: </div>
+          <div className="main_header">Wybierz zasilacz: </div>
           <div className="cartproducts">
             {zasilacz
               .filter((moc) => moc.moc < wymaganaMoc)
@@ -61,9 +75,6 @@ export default function Main(props) {
           </div>
         </>
       )}
-
-
-
     </div>
   );
 }
