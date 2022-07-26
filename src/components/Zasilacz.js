@@ -7,7 +7,7 @@ export default function Zasilacz(props) {
       <div>
         <h3>{zasilacz.nazwa}</h3>
         <hr></hr>
-        <button disabled={button} onClick={() => onAdd(zasilacz)}>DODAJ</button>
+        <button disabled={button} onClick={() => onAdd(zasilacz)}>Wybierz</button>
       </div>
     </div>
   );

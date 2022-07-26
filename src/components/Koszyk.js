@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Koszyk(props) {
   const { cartItems, onAdd } = props;
+  const button_text = "Kup na inergia.pl"
   return (
     <>
       {cartItems.length === 0 ? null : (
@@ -39,7 +40,7 @@ export default function Koszyk(props) {
             <input
               className="button"
               type="submit"
-              value="KUP NA INERGIA.PL"
+              value={button_text}
             ></input>
           </form>
         </div>

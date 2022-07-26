@@ -7,16 +7,17 @@ import data_2 from "./data_2";
 import { useState, useEffect } from "react";
 
 function App() {
+  // DATA
   const { product } = data;
   const { zasilacz } = data_2;
+
+  const [cartItems, setCartItems] = useState([]);
   const [filteredList, setFilteredList] = useState(product);
   const [selectedIp, setSelectedIp] = useState("");
   const [selectedV, setSelectedV] = useState("");
+
   const [inputQty, setInputQty] = useState("");
-
   const [button, setButton] = useState("disabled");
-
-  const [cartItems, setCartItems] = useState([]);
   const [wymaganaMoc, setwymaganaMoc] = useState("");
 
   const handleChangeQty = (value) => {
@@ -28,7 +29,6 @@ function App() {
       alert("Taśma nie może mieć wiecej niż 5 m");
     }
   };
-
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
       return filteredData;
@@ -38,8 +38,6 @@ function App() {
     );
     return filteredTasmy;
   };
-
-
   const filterByV = (filteredData) => {
     if (!selectedV) {
       return filteredData;
@@ -61,18 +59,16 @@ function App() {
 
   useEffect(() => {
     var filteredData = filterByIp(product);
-    filteredData = filterByV(filteredData)
+    filteredData = filterByV(filteredData);
     setFilteredList(filteredData);
   }, [selectedIp, selectedV]);
 
   //Dodawanie do tablicy (koszykowej)
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-
-    if ((product.typ === "tasma")) {
+    if (product.typ === "tasma") {
       setwymaganaMoc(inputQty * product.wspolczynnik * 1.2);
     }
-
     if (inputQty === "") {
       alert("Przed dodaniem podaj Długość taśmy");
     } else {
@@ -105,13 +101,13 @@ function App() {
         zasilacz={zasilacz}
         handleIpChange={handleIpChange}
         handleVChange={handleVChange}
+        handleChangeQty={handleChangeQty}
         selectedIp={selectedIp}
         selectedV={selectedV}
         inputQty={inputQty}
-        handleChangeQty={handleChangeQty}
         cartItems={cartItems}
       ></Main>
-      <Koszyk onAdd={onAdd} cartItems={cartItems} key={922123}></Koszyk>
+      <Koszyk onAdd={onAdd} cartItems={cartItems} key={cartItems.id}></Koszyk>
     </div>
   );
 }
