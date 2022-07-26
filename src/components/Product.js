@@ -6,11 +6,11 @@ export default function Product(props) {
     <div className="product">
       <div>
         <h3>{product.nazwa}</h3>
-        <hr></hr>
+        {/* <hr></hr>
         <h2>Zasilanie: {product.zasilanie}</h2>
         <hr></hr>
         <h2>Stopień ochrony: {product.ip}</h2>
-        <hr></hr>
+        <hr></hr> */}
         <button className="button" disabled={button} onClick={() => onAdd(product)}>Wybierz</button>
         <div></div>
         <br></br>

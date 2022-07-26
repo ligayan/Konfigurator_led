@@ -23,16 +23,17 @@ export default function Main(props) {
         <div className="filter_header">Filtrowanie po IP:</div>
         <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
           <option value="">wybierz IP</option>
-          <option value="ip44">IP44</option>
-          <option value="ip20">IP20</option>
+          <option value="20">IP20</option>
+          <option value="65">IP65</option>
         </select>
       </div>
       <div className="flex">
         <div className="filter_header">Rodzaj zaislania:</div>
         <select id="ip-input" value={selectedV} onChange={handleVChange}>
           <option value="">wybierz zasilanie</option>
-          <option value="12v">12V</option>
-          <option value="24v">24V</option>
+          <option value="12">12V</option>
+          <option value="24">24V</option>
+          <option value="48">48V</option>
         </select>
       </div>
       <div className="flex">

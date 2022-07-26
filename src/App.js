@@ -67,7 +67,7 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc(inputQty * product.wspolczynnik * 1.2);
+      setwymaganaMoc(inputQty * product.moc * 1.2);
     }
     if (inputQty === "") {
       alert("Przed dodaniem podaj Długość taśmy");
@@ -76,7 +76,7 @@ function App() {
         setCartItems(
           cartItems.map((x) =>
             x.id === product.id
-              ? { ...exist, qty: product.typ === "zasilacz" ? 1 : inputQty }
+              ? { ...exist, qty: product.typ === "zasilacz" ? 1 : Math.ceil(inputQty / product.odcinek) }
               : x
           )
         );
@@ -84,7 +84,7 @@ function App() {
         if (cartItems.length === 0 || product.typ === "zasilacz") {
           setCartItems([
             ...cartItems,
-            { ...product, qty: product.typ === "zasilacz" ? 1 : inputQty },
+            { ...product, qty: product.typ === "zasilacz" ? 1 : Math.ceil(inputQty / product.odcinek) },
           ]);
         }
       }

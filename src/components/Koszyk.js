@@ -12,8 +12,7 @@ export default function Koszyk(props) {
             <div className="cartflex" key={item.id}>
               <div key={item.id}>{item.nazwa}</div>
               <div>
-                {item.qty}
-                {item.typ === "tasma" ? " cm" : " szt"}
+                {item.qty} szt
               </div>
               {console.log(item.typ)}
             </div>
