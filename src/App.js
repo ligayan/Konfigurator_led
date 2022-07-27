@@ -67,7 +67,7 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc(inputQty * product.moc * 1.2);
+      setwymaganaMoc(inputQty * product.moc /100 * 1.2);
     }
     if (inputQty === "") {
       alert("Przed dodaniem podaj Długość taśmy");

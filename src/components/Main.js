@@ -65,7 +65,7 @@ export default function Main(props) {
           <div className="main_header">Wybierz zasilacz: </div>
           <div className="cartproducts">
             {zasilacz
-              .filter((moc) => moc.moc < wymaganaMoc)
+              .filter((moc) => moc.moc > wymaganaMoc)
               .map((index) => (
                 <Zasilacz
                   key={index.id}
