@@ -67,26 +67,35 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc(inputQty * product.moc /100 * 1.2);
+      setwymaganaMoc((inputQty * product.moc / 100) );
     }
-    if (inputQty === "") {
-      alert("Przed dodaniem podaj Długość taśmy");
+
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id
+            ? {
+                ...exist,
+                qty:
+                  product.typ === "zasilacz"
+                    ? 1
+                    : Math.ceil(inputQty / product.odcinek),
+              }
+            : x
+        )
+      );
     } else {
-      if (exist) {
-        setCartItems(
-          cartItems.map((x) =>
-            x.id === product.id
-              ? { ...exist, qty: product.typ === "zasilacz" ? 1 : Math.ceil(inputQty / product.odcinek) }
-              : x
-          )
-        );
-      } else {
-        if (cartItems.length === 0 || product.typ === "zasilacz") {
-          setCartItems([
-            ...cartItems,
-            { ...product, qty: product.typ === "zasilacz" ? 1 : Math.ceil(inputQty / product.odcinek) },
-          ]);
-        }
+      if (cartItems.length === 0 || product.typ === "zasilacz") {
+        setCartItems([
+          ...cartItems,
+          {
+            ...product,
+            qty:
+              product.typ === "zasilacz"
+                ? 1
+                : Math.ceil(inputQty / product.odcinek),
+          },
+        ]);
       }
     }
   };
