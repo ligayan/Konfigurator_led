@@ -11,13 +11,17 @@ export default function Product(props) {
         <hr></hr>
         <h2>Stopień ochrony: {product.ip}</h2>
         <hr></hr> */}
-        <button className="button" disabled={button} onClick={() => onAdd(product)}>Wybierz</button>
+        <button
+          className="button"
+          disabled={button}
+          onClick={() => onAdd(product)}
+        >
+          Wybierz
+        </button>
         <div></div>
         <br></br>
       </div>
-      <div>
-        <img src={product.src}alt="fotka"></img>
-      </div>
+      <img src={product.src} alt="fotka"></img>
     </div>
   );
 }
