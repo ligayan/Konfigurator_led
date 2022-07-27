@@ -5,6 +5,7 @@ import Koszyk from "./components/Koszyk";
 import data from "./data";
 import data_2 from "./data_2";
 import { useState, useEffect } from "react";
+import {useRef} from 'react';
 
 function App() {
   // DATA
@@ -21,15 +22,16 @@ function App() {
   const [button, setButton] = useState("disabled");
   const [wymaganaMoc, setwymaganaMoc] = useState("");
 
+  const ref = useRef(null);
+
   const handleChangeQty = (value) => {
-    if (value > 0 && value < 501) {
       setInputQty(value);
       setButton("");
-      setCartItems([]);
-    } else {
-      alert("Taśma nie może mieć wiecej niż 5 m");
-    }
+      // setCartItems([]);
+
   };
+
+
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
       return filteredData;
@@ -56,6 +58,13 @@ function App() {
       (tasma) => tasma.barwa.split(" ").indexOf(selectedK) !== -1
     );
     return filteredTasmy;
+  };
+
+  const handleReset = () => {
+    setFilteredList(product)
+    setSelectedIp("")
+    setSelectedK("")
+    setSelectedV("")
   };
 
 
@@ -114,6 +123,8 @@ function App() {
         ]);
       }
     }
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+    setFilteredList([])
   };
   return (
     <div className="App">
@@ -128,6 +139,7 @@ function App() {
         handleVChange={handleVChange}
         handleKChange={handleKChange}
         handleChangeQty={handleChangeQty}
+        handleReset={handleReset}
         selectedIp={selectedIp}
         selectedV={selectedV}
         selectedK={selectedK}
@@ -135,6 +147,7 @@ function App() {
         cartItems={cartItems}
       ></Main>
       <Koszyk onAdd={onAdd} cartItems={cartItems} key={cartItems.id}></Koszyk>
+      <div ref={ref}></div>
     </div>
   );
 }

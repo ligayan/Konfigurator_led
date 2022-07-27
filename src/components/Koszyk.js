@@ -5,7 +5,7 @@ export default function Koszyk(props) {
   const button_text = "Kup na inergia.pl"
   return (
     <>
-      {cartItems.length === 0 ? null : (
+      {cartItems.length === 0 ? <div></div> : (
         <div className="cart" key={cartItems.id}>
           <div>Produkty W konfiguracji</div>
           {cartItems.map((item) => (

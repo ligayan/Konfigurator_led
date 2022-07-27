@@ -17,7 +17,9 @@ export default function Main(props) {
     selectedV,
     selectedK,
     handleVChange,
-    handleKChange
+    handleKChange,
+    handleReset,
+
   } = props;
   return (
 
@@ -57,7 +59,8 @@ export default function Main(props) {
           onChange={(e) => handleChangeQty(e.target.value)}
         ></input>
       </div>
-      {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null}
+      <button onClick={handleReset}> Resetuj</button>
+      {/* {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null} */}
       <div className="cartproducts">
         {product.map((index,) => (
           <Product
