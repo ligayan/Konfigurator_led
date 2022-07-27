@@ -13,7 +13,7 @@ const data = {
       moc: 6,
       rodzaj: "single",
       odcinek: 5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-60-20-WW-100_1.jpg",
     },
     {
@@ -29,7 +29,7 @@ const data = {
       moc: 6,
       rodzaj: "single",
       odcinek: 5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-60-20-NW-100_1.jpg",
     },
     {
@@ -45,7 +45,7 @@ const data = {
       moc: 6,
       rodzaj: "single",
       odcinek: 5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-60-65-NW-5_1.jpg",
     },
     {
@@ -61,7 +61,7 @@ const data = {
       moc: 12,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-120-60-WW-100_1.jpg",
     },
     {
@@ -77,7 +77,7 @@ const data = {
       moc: 12,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-120-60-NW-100_01.jpg",
     },
     {
@@ -93,7 +93,7 @@ const data = {
       moc: 12,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-120-65-WW-5_1.jpg",
     },
     {
@@ -109,7 +109,7 @@ const data = {
       moc: 12,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-120-65-NW-5_1.jpg",
     },
     {
@@ -125,7 +125,7 @@ const data = {
       moc: 18,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P5050-120-20-WW-100_1.jpg",
     },
     {
@@ -141,7 +141,7 @@ const data = {
       moc: 18,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P5050-120-20-NW-100_1.jpg",
     },
     {
@@ -157,7 +157,7 @@ const data = {
       moc: 18,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-120-65-WW-5_1.jpg",
     },
     {
@@ -173,7 +173,7 @@ const data = {
       moc: 18,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P5050-120-65-NW-5_1.jpg",
     },
     {
@@ -189,7 +189,7 @@ const data = {
       moc: 20,
       rodzaj: "single",
       odcinek: 1.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-210-20-WW-100_1.jpg",
     },
     {
@@ -205,7 +205,7 @@ const data = {
       moc: 20,
       rodzaj: "single",
       odcinek: 1.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-210-20-NW-100_1.jpg",
     },
     {
@@ -221,7 +221,7 @@ const data = {
       moc: 15,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 0,
+      barwa: "0",
       src: "img/P3014-240-20-CCT-100_1.jpg",
     },
     {
@@ -236,7 +236,7 @@ const data = {
       moc: 19.2,
       rodzaj: "rgb",
       odcinek: 5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P5050-60-20-RNW-100_1.jpg",
     },
     {
@@ -251,7 +251,7 @@ const data = {
       moc: 19.2,
       rodzaj: "rgb",
       odcinek: 5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P5050-60-65-RNW-5_1.jpg",
     },
     {
@@ -266,8 +266,8 @@ const data = {
       moc: 21.6,
       rodzaj: "rgb",
       odcinek: 5,
-      barwa: 0,
-      src:"img/P5050-60-20-RCCT-100_1.jpg",
+      barwa: "0",
+      src: "img/P5050-60-20-RCCT-100_1.jpg",
     },
     {
       id: 18,
@@ -282,8 +282,8 @@ const data = {
       moc: 15,
       rodzaj: "single",
       odcinek: 5,
-      barwa: 0,
-      src:"img/P2835-120-20-DIM-100_1.jpg",
+      barwa: "0",
+      src: "img/P2835-120-20-DIM-100_1.jpg",
     },
     {
       id: 19,
@@ -298,7 +298,7 @@ const data = {
       moc: 15,
       rodzaj: "single",
       odcinek: 4.2,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-120-65-WW-48-5_1.jpg",
     },
     {
@@ -314,7 +314,7 @@ const data = {
       moc: 15,
       rodzaj: "single",
       odcinek: 4.2,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-120-65-NW-48-5_1.jpg",
     },
     {
@@ -329,7 +329,7 @@ const data = {
       moc: 24,
       rodzaj: "single",
       odcinek: 3.2,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/P2835-256-20-NW-100_1.jpg",
     },
     {
@@ -344,7 +344,7 @@ const data = {
       moc: 10,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/PCOB-20-WW-5_1.jpg",
     },
     {
@@ -359,7 +359,7 @@ const data = {
       moc: 10,
       rodzaj: "single",
       odcinek: 2.5,
-      barwa: 4000,
+      barwa: "4000",
       src: "img/PCOB-20-NW-5_1.jpg",
     },
     {
@@ -375,7 +375,7 @@ const data = {
       moc: 6,
       rodzaj: "single",
       odcinek: 5,
-      barwa: 3000,
+      barwa: "3000",
       src: "img/P2835-60-65-WW-5_1.jpg",
     },
   ],

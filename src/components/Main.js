@@ -15,7 +15,9 @@ export default function Main(props) {
     cartItems,
     wymaganaMoc,
     selectedV,
-    handleVChange
+    selectedK,
+    handleVChange,
+    handleKChange
   } = props;
   return (
 
@@ -26,6 +28,15 @@ export default function Main(props) {
           <option value="">wybierz IP</option>
           <option value="20">IP20</option>
           <option value="65">IP65</option>
+        </select>
+      </div>
+      <div className="flex">
+        <div className="filter_header">Filtowanie po Barwie:</div>
+        <select id="ip-input" value={selectedK} onChange={handleKChange}>
+          <option value="">wybierz barwę</option>
+          <option value="3000">3000 K</option>
+          <option value="4000">4000 K</option>
+          <option value="0">Barwa Regulowana</option>
         </select>
       </div>
       <div className="flex">

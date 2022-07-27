@@ -15,6 +15,7 @@ function App() {
   const [filteredList, setFilteredList] = useState(product);
   const [selectedIp, setSelectedIp] = useState("");
   const [selectedV, setSelectedV] = useState("");
+  const [selectedK, setSelectedK] = useState("");
 
   const [inputQty, setInputQty] = useState("");
   const [button, setButton] = useState("disabled");
@@ -47,6 +48,15 @@ function App() {
     );
     return filteredTasmy;
   };
+  const filterByK = (filteredData) => {
+    if (!selectedK) {
+      return filteredData;
+    }
+    const filteredTasmy = filteredData.filter(
+      (tasma) => tasma.barwa.split(" ").indexOf(selectedK) !== -1
+    );
+    return filteredTasmy;
+  };
 
   const handleIpChange = (event) => {
     setSelectedIp(event.target.value);
@@ -56,12 +66,17 @@ function App() {
     setSelectedV(event.target.value);
     setCartItems([]);
   };
+  const handleKChange = (event) => {
+    setSelectedK(event.target.value);
+    setCartItems([]);
+  };
 
   useEffect(() => {
     var filteredData = filterByIp(product);
     filteredData = filterByV(filteredData);
+    filteredData = filterByK(filteredData);
     setFilteredList(filteredData);
-  }, [selectedIp, selectedV]);
+  }, [selectedIp, selectedV, selectedK]);
 
   //Dodawanie do tablicy (koszykowej)
   const onAdd = (product) => {
@@ -110,9 +125,11 @@ function App() {
         zasilacz={zasilacz}
         handleIpChange={handleIpChange}
         handleVChange={handleVChange}
+        handleKChange={handleKChange}
         handleChangeQty={handleChangeQty}
         selectedIp={selectedIp}
         selectedV={selectedV}
+        selectedK={selectedK}
         inputQty={inputQty}
         cartItems={cartItems}
       ></Main>
