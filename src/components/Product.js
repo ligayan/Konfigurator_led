@@ -6,12 +6,6 @@ export default function Product(props) {
     <div className="product">
       <div>
         <h3>{product.nazwa}</h3>
-        <h4>{product.moc/100}</h4>
-        {/* <hr></hr>
-        <h2>Zasilanie: {product.zasilanie}</h2>
-        <hr></hr>
-        <h2>Stopień ochrony: {product.ip}</h2>
-        <hr></hr> */}
         <button
           className="button"
           disabled={button}
