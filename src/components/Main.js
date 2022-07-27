@@ -18,6 +18,7 @@ export default function Main(props) {
     handleVChange
   } = props;
   return (
+
     <div className="filters">
       <div className="flex">
         <div className="filter_header">Filtrowanie po IP:</div>

@@ -15,6 +15,9 @@ export default function Product(props) {
         <div></div>
         <br></br>
       </div>
+      <div>
+        <img src={product.src}alt="fotka"></img>
+      </div>
     </div>
   );
 }

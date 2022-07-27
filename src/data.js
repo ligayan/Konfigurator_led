@@ -267,7 +267,7 @@ const data = {
       rodzaj: "rgb",
       odcinek: 5,
       barwa: 0,
-      src: "img/P5050-60-20-RCCT-100_1.jpg",
+      src:"img/P5050-60-20-RCCT-100_1.jpg",
     },
     {
       id: 18,
@@ -283,7 +283,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: 0,
-      src: "img/P2835-120-20-DIM-100_1.jpg",
+      src:"img/P2835-120-20-DIM-100_1.jpg",
     },
     {
       id: 19,
