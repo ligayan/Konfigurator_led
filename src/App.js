@@ -5,7 +5,7 @@ import Koszyk from "./components/Koszyk";
 import data from "./data";
 import data_2 from "./data_2";
 import { useState, useEffect } from "react";
-import {useRef} from 'react';
+import { useRef } from "react";
 
 function App() {
   // DATA
@@ -25,12 +25,15 @@ function App() {
   const ref = useRef(null);
 
   const handleChangeQty = (value) => {
-      setInputQty(value);
-      setButton("");
-      // setCartItems([]);
-
+    setInputQty(value);
+    if (selectedV === "") {
+      alert("Musisz podać zasilanie")
+      setInputQty("")
+    }else{
+      setButton("")
+    }
+    // setCartItems([]);
   };
-
 
   const filterByIp = (filteredData) => {
     if (!selectedIp) {
@@ -61,12 +64,14 @@ function App() {
   };
 
   const handleReset = () => {
-    setFilteredList(product)
-    setSelectedIp("")
-    setSelectedK("")
-    setSelectedV("")
+    setFilteredList(product);
+    setSelectedIp("");
+    setSelectedK("");
+    setSelectedV("");
+    setCartItems("");
+    setInputQty("");
+    setButton("disabled")
   };
-
 
   const handleIpChange = (event) => {
     setSelectedIp(event.target.value);
@@ -92,7 +97,7 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc((Math.ceil(inputQty * product.moc / 100 * 1.15)) );
+      setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.15));
     }
 
     if (exist) {
@@ -123,8 +128,8 @@ function App() {
         ]);
       }
     }
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-    setFilteredList([])
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+    setFilteredList([]);
   };
   return (
     <div className="App">
