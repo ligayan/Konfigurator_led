@@ -19,10 +19,8 @@ export default function Main(props) {
     handleVChange,
     handleKChange,
     handleReset,
-
   } = props;
   return (
-
     <div className="filters">
       <div className="flex">
         <div className="filter_header">Filtrowanie po IP:</div>
@@ -53,8 +51,9 @@ export default function Main(props) {
       <div className="flex">
         <div className="filter_header">Długość:</div>
         <input
+          style={{width: "10%"}}
           type="number"
-          placeholder="Długość taśmy w cm..."
+          placeholder="cm"
           value={inputQty}
           onChange={(e) => handleChangeQty(e.target.value)}
         ></input>
@@ -62,7 +61,7 @@ export default function Main(props) {
       <button onClick={handleReset}> Resetuj</button>
       {/* {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null} */}
       <div className="cartproducts">
-        {product.map((index,) => (
+        {product.map((index) => (
           <Product
             key={index.id}
             product={index}
@@ -79,7 +78,7 @@ export default function Main(props) {
           <div className="main_header">Wybierz zasilacz: </div>
           <div className="cartproducts">
             {zasilacz
-              .filter((moc) => moc.moc > wymaganaMoc)
+              .filter((moc) => moc.moc > wymaganaMoc && moc.zasilanie === selectedV)
               .map((index) => (
                 <Zasilacz
                   key={index.id}

@@ -92,7 +92,7 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc((inputQty * product.moc / 100) );
+      setwymaganaMoc((Math.ceil(inputQty * product.moc / 100 * 1.15)) );
     }
 
     if (exist) {

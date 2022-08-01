@@ -6,7 +6,6 @@ export default function Zasilacz(props) {
     <div className="product">
       <div>
         <h3>{zasilacz.nazwa}</h3>
-        <hr></hr>
         <button disabled={button} onClick={() => onAdd(zasilacz)}>Wybierz</button>
       </div>
     </div>
