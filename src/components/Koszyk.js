@@ -7,11 +7,11 @@ export default function Koszyk(props) {
     <>
       {cartItems.length === 0 ? <div></div> : (
         <div className="cart" key={cartItems.id}>
-          <div>Produkty W konfiguracji</div>
+          <div><h3>Produkty u zestawie</h3></div>
           {cartItems.map((item) => (
             <div className="cartflex" key={item.id}>
-              <div key={item.id}>{item.nazwa}</div>
-              <div>
+              <div className="cart_name" key={item.id}>{item.nazwa}</div>
+              <div className="cart_qty">
                 {item.qty} szt
               </div>
               {console.log(item.typ)}

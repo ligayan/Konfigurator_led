@@ -6,6 +6,15 @@
 
 }
 
+.cart_name {
+  width: 80%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cart_qty{max-width: 30%;}
+
 img{
   max-width: 100px;
 }
@@ -32,7 +41,10 @@ img{
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 
 }
+footer{
+  padding: 2em;
 
+}
 
 input{
   padding: 10px;
@@ -44,17 +56,18 @@ input{
 
 
 button, .button{
-  background-color: green;
+  background-color: #10a7d1;
   padding: 10px;
   color: white;
-  border: 1px solid white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: .5em 0;
 }
 
 button:hover{
-  transition: all 1s;
-  background-color:#61dafb;
+  transition: all 1.2s;
+  background-color:#1a5666;
 
 }
 
@@ -91,11 +104,12 @@ button:disabled{
 }
 .cart{
   display: block;
-  margin: auto;
-  background-color: rgb(238, 238, 238);
+  margin: 20px auto;
+  background-color: rgb(31, 29, 29);
+  color: white;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 30px rgb(91, 115, 182);
+
+
 
 }
 
@@ -105,6 +119,7 @@ button:disabled{
   text-align: center;
   flex-wrap: wrap;
 }
+
 
 
 .product{
@@ -129,7 +144,7 @@ button:disabled{
 
 .App {
   text-align: center;
-  margin: 20px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 .App-logo {

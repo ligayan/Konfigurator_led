@@ -6,6 +6,7 @@ import data from "./data";
 import data_2 from "./data_2";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   // DATA
@@ -27,10 +28,10 @@ function App() {
   const handleChangeQty = (value) => {
     setInputQty(value);
     if (selectedV === "") {
-      alert("Musisz podać zasilanie")
-      setInputQty("")
-    }else{
-      setButton("")
+      alert("Musisz podać zasilanie");
+      setInputQty("");
+    } else {
+      setButton("");
     }
     // setCartItems([]);
   };
@@ -70,7 +71,7 @@ function App() {
     setSelectedV("");
     setCartItems("");
     setInputQty("");
-    setButton("disabled")
+    setButton("disabled");
   };
 
   const handleIpChange = (event) => {
@@ -97,9 +98,8 @@ function App() {
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (product.typ === "tasma") {
-      setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.15));
+      setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.2));
     }
-
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
@@ -131,6 +131,16 @@ function App() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
     setFilteredList([]);
   };
+
+  const zestaw = (product) => {
+    const exist = cartItems.find((x) => x.identyfikator === product.identyfikator);
+    if (exist) {
+      setCartItems([...exist, product.qty + product.qty])
+    }else{
+      alert("bład")
+    }
+  };
+
   return (
     <div className="App">
       <Header></Header>
@@ -151,8 +161,16 @@ function App() {
         inputQty={inputQty}
         cartItems={cartItems}
       ></Main>
-      <Koszyk onAdd={onAdd} cartItems={cartItems} key={cartItems.id}></Koszyk>
+      <Koszyk
+        onAdd={onAdd}
+        cartItems={cartItems}
+        key={cartItems.id}
+        zestaw={zestaw}
+        product={filteredList}
+      ></Koszyk>
+      <Footer></Footer>
       <div ref={ref}></div>
+
     </div>
   );
 }

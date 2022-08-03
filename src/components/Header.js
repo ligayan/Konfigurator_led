@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Header(props) {
-  return <header>INERGIA KONFIGURATOR</header>;
+  return <header>Konfigurator Taśm led</header>;
 }
