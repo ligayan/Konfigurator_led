@@ -19,6 +19,8 @@ function App() {
   const [selectedV, setSelectedV] = useState("");
   const [selectedK, setSelectedK] = useState("");
 
+  const [hide, setHide] = useState(false);
+
   const [inputQty, setInputQty] = useState("");
   const [button, setButton] = useState("disabled");
   const [wymaganaMoc, setwymaganaMoc] = useState("");
@@ -70,8 +72,9 @@ function App() {
     setSelectedK("");
     setSelectedV("");
     setCartItems("");
-    setInputQty("");
+    setInputQty(" ");
     setButton("disabled");
+    setHide(false);
   };
 
   const handleIpChange = (event) => {
@@ -97,6 +100,9 @@ function App() {
   //Dodawanie do tablicy (koszykowej)
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
+    if (product.typ === "zasilacz") {
+      setHide(true);
+    }
     if (product.typ === "tasma") {
       setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.2));
     }
@@ -133,11 +139,13 @@ function App() {
   };
 
   const zestaw = (product) => {
-    const exist = cartItems.find((x) => x.identyfikator === product.identyfikator);
+    const exist = cartItems.find(
+      (x) => x.identyfikator === product.identyfikator
+    );
     if (exist) {
-      setCartItems([...exist, product.qty + product.qty])
-    }else{
-      alert("bład")
+      setCartItems([...exist, product.qty + product.qty]);
+    } else {
+      alert("bład");
     }
   };
 
@@ -160,7 +168,9 @@ function App() {
         selectedK={selectedK}
         inputQty={inputQty}
         cartItems={cartItems}
+        hide={hide}
       ></Main>
+      <div ref={ref}></div>
       <Koszyk
         onAdd={onAdd}
         cartItems={cartItems}
@@ -168,9 +178,8 @@ function App() {
         zestaw={zestaw}
         product={filteredList}
       ></Koszyk>
-      <Footer></Footer>
-      <div ref={ref}></div>
 
+      <Footer></Footer>
     </div>
   );
 }

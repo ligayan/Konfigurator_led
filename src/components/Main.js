@@ -19,6 +19,7 @@ export default function Main(props) {
     handleVChange,
     handleKChange,
     handleReset,
+    hide,
   } = props;
   return (
     <div className="filters">
@@ -74,7 +75,7 @@ export default function Main(props) {
       {cartItems.length === 0 ? (
         ""
       ) : (
-        <>
+        <div className={`lightbox ${hide ? "hide" : ""}`}>
           <div className="main_header">Wybierz zasilacz: </div>
           <div className="cartproducts">
             {zasilacz
@@ -88,7 +89,7 @@ export default function Main(props) {
                 ></Zasilacz>
               ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

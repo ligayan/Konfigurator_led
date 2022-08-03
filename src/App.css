@@ -53,7 +53,9 @@ input{
 .filter_header{
   width: 20%;
 }
-
+.hide{
+  display: none!important;
+}
 
 button, .button{
   background-color: #10a7d1;
