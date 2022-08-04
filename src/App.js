@@ -73,9 +73,10 @@ function App() {
     setSelectedK("");
     setSelectedV("");
     setCartItems("");
-    setInputQty(" ");
-    setButton("disabled");
+    setInputQty("");
+    setButton("disabled")
     setHide(false);
+    setwymaganaMoc("");
   };
 
   const handleIpChange = (event) => {
@@ -139,31 +140,29 @@ function App() {
     setFilteredList([]);
   };
 
-  const zestaw = (product) => {
-    const exist = cartItems.find(
-      (x) => x.identyfikator === product.identyfikator
-    );
-    if (exist) {
-      setCartItems([...exist, product.qty + product.qty]);
-    } else {
-      alert("bład");
-    }
-  };
 
   return (
     <div className="App">
       <Header></Header>
-      <Filters
-        selectedIp={selectedIp}
-        handleIpChange={handleIpChange}
-        selectedK={selectedK}
-        handleKChange={handleKChange}
-        selectedV={selectedV}
-        handleVChange={handleVChange}
-        handleReset={handleReset}
-        inputQty={inputQty}
-        handleChangeQty={handleChangeQty}
-      ></Filters>
+      <div className="main_flex">
+        <Filters
+          selectedIp={selectedIp}
+          handleIpChange={handleIpChange}
+          selectedK={selectedK}
+          handleKChange={handleKChange}
+          selectedV={selectedV}
+          handleVChange={handleVChange}
+          handleReset={handleReset}
+          inputQty={inputQty}
+          handleChangeQty={handleChangeQty}
+        ></Filters>
+        <Koszyk
+          onAdd={onAdd}
+          cartItems={cartItems}
+          key={cartItems.id}
+          product={filteredList}
+        ></Koszyk>
+      </div>
       <Main
         wymaganaMoc={wymaganaMoc}
         selectedV={selectedV}
@@ -176,15 +175,10 @@ function App() {
         inputQty={inputQty}
         cartItems={cartItems}
         hide={hide}
+        filteredList={filteredList}
       ></Main>
       <div ref={ref}></div>
-      <Koszyk
-        onAdd={onAdd}
-        cartItems={cartItems}
-        key={cartItems.id}
-        zestaw={zestaw}
-        product={filteredList}
-      ></Koszyk>
+
       <Footer></Footer>
     </div>
   );

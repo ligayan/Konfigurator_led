@@ -1,9 +1,13 @@
+body{
+  margin: 10px;
+}
+
+
 :root {
   --select-border: #777;
   --select-focus: #61dafb;
   --select-arrow: var(--select-border);
-  --select-hover:red;
-
+  --select-hover: red;
 }
 
 .cart_name {
@@ -13,21 +17,24 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.cart_qty{max-width: 30%;}
+.cart_qty {
+  max-width: 30%;
+}
 
-img{
+img {
   max-width: 100px;
 }
-.alert{
-  width: 60%;
+.alert {
+  max-width: 70%;
   text-align: center;
   font-size: x-large;
-  padding: 10%;
+  padding: 25vh;
   border: solid 1px black;
   margin: auto;
 }
 
-.filters input, select {
+.filters input,
+select {
   width: 100%;
   min-width: 15ch;
   max-width: 30ch;
@@ -39,92 +46,96 @@ img{
   line-height: 1.1;
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-
 }
-footer{
+
+.filter_products {
+}
+
+.main_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
   padding: 2em;
-
 }
 
-input{
+input {
   padding: 10px;
 }
 
-.filter_header{
+.filter_header {
   width: 20%;
 }
-.hide{
-  display: none!important;
+.hide {
+  display: none !important;
 }
 
-button, .button{
+button,
+.button {
   background-color: #10a7d1;
   padding: 10px;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
-button:hover{
+button:hover {
   transition: all 1.2s;
-  background-color:#1a5666;
-
+  background-color: #1a5666;
 }
 
-.flex{
+.flex {
   display: flex;
   padding: 10px;
 }
 
-.filters{
+.filters {
   display: block;
   align-items: left;
   text-align: left;
+  margin: 0 20px;
+  width: 50%;
 }
 
-button:disabled{
+button:disabled {
   background-color: lightgrey;
   cursor: not-allowed;
-
-
 }
 
-.main_header{
+.main_header {
   font-size: x-large;
   padding: 20px;
   text-align: center;
 }
 
-
-.cartflex{
+.cartflex {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-
 }
-.cart{
+.cart {
   display: block;
-  margin: 20px auto;
+  margin: auto, 20px;
   background-color: rgb(31, 29, 29);
   color: white;
   padding: 20px;
-
-
-
+  align-items: flex-start;
+  width: 40%;
+  display: block;
 }
 
-.cartproducts{
+.cartproducts {
   display: flex;
   justify-content: space-around;
   text-align: center;
   flex-wrap: wrap;
 }
 
-
-
-.product{
+.product {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,15 +144,6 @@ button:disabled{
   box-shadow: 5px 5px 10px 4px gray;
   border-radius: 10px;
   width: 20%;
-
-
-}
-
-.cart{
-  align-items: flex-start;
-  max-width: 30%;
-  display: block;
-  justify-content: space-around;
 }
 
 .App {

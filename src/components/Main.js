@@ -12,9 +12,10 @@ export default function Main(props) {
     wymaganaMoc,
     selectedV,
     hide,
+    filteredList,
   } = props;
   return (
-    <div className="filters">
+    <div className="filter_products">
       {/* <div className="flex">
         <div className="filter_header">Filtrowanie po IP:</div>
         <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
@@ -52,7 +53,8 @@ export default function Main(props) {
         ></input>
       </div>
       <button onClick={handleReset}> Resetuj</button> */}
-      {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null}
+      {filteredList.length === 0 && cartItems.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null}
+      {console.log(filteredList)}
       <div className="cartproducts">
         {product.map((index) => (
           <Product
@@ -63,12 +65,12 @@ export default function Main(props) {
           ></Product>
         ))}
       </div>
-      <div>Wymagana moc: {wymaganaMoc}</div>
       {cartItems.length === 0 ? (
         ""
       ) : (
         <div className={`lightbox ${hide ? "hide" : ""}`}>
           <div className="main_header">Wybierz zasilacz: </div>
+          <div className="main_header" >Zalecana moc zasilacza : {wymaganaMoc} W </div>
           <div className="cartproducts">
             {zasilacz
               .filter((moc) => moc.moc > wymaganaMoc && moc.zasilanie === selectedV)
