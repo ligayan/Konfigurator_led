@@ -7,6 +7,7 @@ import data_2 from "./data_2";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import Footer from "./components/Footer";
+import Filters from "./components/Filters";
 
 function App() {
   // DATA
@@ -152,20 +153,26 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <Filters
+        selectedIp={selectedIp}
+        handleIpChange={handleIpChange}
+        selectedK={selectedK}
+        handleKChange={handleKChange}
+        selectedV={selectedV}
+        handleVChange={handleVChange}
+        handleReset={handleReset}
+        inputQty={inputQty}
+        handleChangeQty={handleChangeQty}
+      ></Filters>
       <Main
         wymaganaMoc={wymaganaMoc}
+        selectedV={selectedV}
         button={button}
         onAdd={onAdd}
         product={filteredList}
         zasilacz={zasilacz}
-        handleIpChange={handleIpChange}
         handleVChange={handleVChange}
-        handleKChange={handleKChange}
         handleChangeQty={handleChangeQty}
-        handleReset={handleReset}
-        selectedIp={selectedIp}
-        selectedV={selectedV}
-        selectedK={selectedK}
         inputQty={inputQty}
         cartItems={cartItems}
         hide={hide}
@@ -178,7 +185,6 @@ function App() {
         zestaw={zestaw}
         product={filteredList}
       ></Koszyk>
-
       <Footer></Footer>
     </div>
   );

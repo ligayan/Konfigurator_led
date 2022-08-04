@@ -1,21 +1,10 @@
 import React from "react";
-import Product from "./Product";
-import Zasilacz from "./Zasilacz";
 
-export default function Main(props) {
-  const {
-    product,
-    zasilacz,
-    onAdd,
-    button,
-    cartItems,
-    wymaganaMoc,
-    selectedV,
-    hide,
-  } = props;
+export default function Filters(props) {
+  const {inputQty,handleChangeQty, selectedIp, handleIpChange, selectedK, handleKChange, selectedV, handleVChange, handleReset} =props;
   return (
     <div className="filters">
-      {/* <div className="flex">
+      <div className="flex">
         <div className="filter_header">Filtrowanie po IP:</div>
         <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
           <option value="">wybierz IP</option>
@@ -44,45 +33,14 @@ export default function Main(props) {
       <div className="flex">
         <div className="filter_header">Długość:</div>
         <input
-          style={{width: "10%"}}
+          style={{ width: "10%" }}
           type="number"
           placeholder="cm"
           value={inputQty}
           onChange={(e) => handleChangeQty(e.target.value)}
         ></input>
       </div>
-      <button onClick={handleReset}> Resetuj</button> */}
-      {product.length === 0 ? <div className="alert">Brak produktów Spełniających wymagania </div> : null}
-      <div className="cartproducts">
-        {product.map((index) => (
-          <Product
-            key={index.id}
-            product={index}
-            onAdd={onAdd}
-            button={button}
-          ></Product>
-        ))}
-      </div>
-      <div>Wymagana moc: {wymaganaMoc}</div>
-      {cartItems.length === 0 ? (
-        ""
-      ) : (
-        <div className={`lightbox ${hide ? "hide" : ""}`}>
-          <div className="main_header">Wybierz zasilacz: </div>
-          <div className="cartproducts">
-            {zasilacz
-              .filter((moc) => moc.moc > wymaganaMoc && moc.zasilanie === selectedV)
-              .map((index) => (
-                <Zasilacz
-                  key={index.id}
-                  zasilacz={index}
-                  onAdd={onAdd}
-                  button={button}
-                ></Zasilacz>
-              ))}
-          </div>
-        </div>
-      )}
+      <button onClick={handleReset}> Resetuj</button>
     </div>
   );
 }
