@@ -181,8 +181,7 @@ function App() {
         filteredList={filteredList}
       ></Main>
       <div ref={ref}></div>
-
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
