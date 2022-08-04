@@ -81,15 +81,16 @@ function App() {
 
   const handleIpChange = (event) => {
     setSelectedIp(event.target.value);
-    setCartItems([]);
+
+
   };
   const handleVChange = (event) => {
     setSelectedV(event.target.value);
-    setCartItems([]);
+
   };
   const handleKChange = (event) => {
     setSelectedK(event.target.value);
-    setCartItems([]);
+
   };
 
   useEffect(() => {
@@ -97,6 +98,8 @@ function App() {
     filteredData = filterByV(filteredData);
     filteredData = filterByK(filteredData);
     setFilteredList(filteredData);
+    setCartItems([]);
+    setHide(false);
   }, [selectedIp, selectedV, selectedK]);
 
   //Dodawanie do tablicy (koszykowej)
