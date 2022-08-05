@@ -2,18 +2,22 @@ import React from "react";
 
 export default function Koszyk(props) {
   const { cartItems, onAdd } = props;
-  const button_text = "Kup na inergia.pl"
+  const button_text = "Kup na inergia.pl";
   return (
     <>
-      {cartItems.length === 0 ? <div></div> : (
+      {cartItems.length === 0 ? (
+        <div></div>
+      ) : (
         <div className="cart" key={cartItems.id}>
-          <div><h3>Produkty u zestawie</h3></div>
+          <div>
+            <h3>Produkty u zestawie</h3>
+          </div>
           {cartItems.map((item) => (
             <div className="cartflex" key={item.id}>
-              <div className="cart_name" key={item.id}>{item.nazwa}</div>
-              <div className="cart_qty">
-                {item.qty} szt
+              <div className="cart_name" key={item.id}>
+                {item.nazwa}
               </div>
+              <div className="cart_qty">{item.qty} szt</div>
               {console.log(item.typ)}
             </div>
           ))}
@@ -36,11 +40,7 @@ export default function Koszyk(props) {
                 ></input>
               </>
             ))}
-            <input
-              className="button"
-              type="submit"
-              value={button_text}
-            ></input>
+            <input className="button" type="submit" value={button_text}></input>
           </form>
         </div>
       )}

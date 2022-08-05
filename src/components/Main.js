@@ -14,6 +14,7 @@ export default function Main(props) {
     selectedV,
     hide,
     filteredList,
+    filtrowanie
   } = props;
   return (
     <div className="filter_products">
@@ -35,9 +36,7 @@ export default function Main(props) {
         ""
       ) : (
         <div className={`lightbox ${hide ? "hide" : ""}`}>
-          {zasilacz.filter(
-            (moc) => moc.moc > wymaganaMoc && moc.zasilanie === selectedV
-          ).length === 0 ? (
+          {filtrowanie(zasilacz).length === 0 ? (
             <div className="alert">Brak zasilaczy dla wybranego napięcia <br></br> <Kontakt></Kontakt> </div>
           ) : (
             <div>

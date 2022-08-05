@@ -9,6 +9,7 @@ import { useRef } from "react";
 import Footer from "./components/Footer";
 import Filters from "./components/Filters";
 
+
 function App() {
   // DATA
   const { product } = data;
@@ -37,6 +38,14 @@ function App() {
       setButton("");
     }
     // setCartItems([]);
+  };
+
+  //Skrócenie filtrowania zasilaczy
+  const filtrowanie = (zmienna) => {
+    const wynik =zmienna.filter(
+      (klucz) => klucz.moc > wymaganaMoc && klucz.zasilanie === selectedV
+    );
+    return wynik;
   };
 
   const filterByIp = (filteredData) => {
@@ -74,23 +83,19 @@ function App() {
     setSelectedV("");
     setCartItems("");
     setInputQty("");
-    setButton("disabled")
+    setButton("disabled");
     setHide(false);
     setwymaganaMoc("");
   };
 
   const handleIpChange = (event) => {
     setSelectedIp(event.target.value);
-
-
   };
   const handleVChange = (event) => {
     setSelectedV(event.target.value);
-
   };
   const handleKChange = (event) => {
     setSelectedK(event.target.value);
-
   };
 
   useEffect(() => {
@@ -143,7 +148,6 @@ function App() {
     setFilteredList([]);
   };
 
-
   return (
     <div className="App">
       <Header></Header>
@@ -179,9 +183,10 @@ function App() {
         cartItems={cartItems}
         hide={hide}
         filteredList={filteredList}
+        filtrowanie={filtrowanie}
       ></Main>
       <div ref={ref}></div>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 }
