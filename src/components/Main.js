@@ -14,12 +14,14 @@ export default function Main(props) {
     selectedV,
     hide,
     filteredList,
-    filtrowanie
+    filtrowanie,
   } = props;
   return (
     <div className="filter_products">
       {filteredList.length === 0 && cartItems.length === 0 ? (
-        <div className="alert">Brak produktów Spełniających wymagania <Kontakt></Kontakt> </div>
+        <div className="alert">
+          Brak produktów Spełniających wymagania <Kontakt></Kontakt>{" "}
+        </div>
       ) : null}
       <div className="cartproducts">
         {product.map((index) => (
@@ -36,7 +38,10 @@ export default function Main(props) {
       ) : (
         <div className={`lightbox ${hide ? "hide" : ""}`}>
           {filtrowanie(zasilacz).length === 0 ? (
-            <div className="alert">Brak zasilaczy dla wybranego napięcia <br></br> <Kontakt></Kontakt> </div>
+            <div className="alert">
+              Brak zasilaczy dla wybranego napięcia <br></br>{" "}
+              <Kontakt></Kontakt>{" "}
+            </div>
           ) : (
             <div>
               <div className="main_header">Wybierz zasilacz: </div>
@@ -45,9 +50,14 @@ export default function Main(props) {
               </div>
               <div className="cartproducts">
                 {zasilacz
-                  .filter(
-                    (moc) =>
-                      moc.moc > wymaganaMoc && moc.zasilanie === selectedV && wymaganaMoc < 15 ? (moc.moc <= 15) : ( moc.moc > wymaganaMoc && moc.moc <= wymaganaMoc*1.5)
+                  .filter((moc) =>
+                    wymaganaMoc < 45
+                      ? moc.moc > wymaganaMoc &&
+                        moc.moc <= 45 &&
+                        moc.zasilanie === selectedV
+                      : moc.moc > wymaganaMoc &&
+                        moc.moc <= wymaganaMoc * 1.2 &&
+                        moc.zasilanie === selectedV
                   )
                   .map((index) => (
                     <Zasilacz
