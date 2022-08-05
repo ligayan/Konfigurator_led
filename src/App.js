@@ -114,7 +114,7 @@ function App() {
       setHide(true);
     }
     if (product.typ === "tasma") {
-      setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.2));
+      setwymaganaMoc(Math.ceil(((inputQty * product.moc) / 100) * 1.1));
     }
     if (exist) {
       setCartItems(

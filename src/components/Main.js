@@ -47,7 +47,7 @@ export default function Main(props) {
                 {zasilacz
                   .filter(
                     (moc) =>
-                      moc.moc > wymaganaMoc && moc.zasilanie === selectedV
+                      moc.moc > wymaganaMoc && moc.zasilanie === selectedV && wymaganaMoc < 15 ? (moc.moc <= 15) : ( moc.moc > wymaganaMoc && moc.moc <= wymaganaMoc*1.5)
                   )
                   .map((index) => (
                     <Zasilacz
