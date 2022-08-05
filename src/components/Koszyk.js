@@ -8,17 +8,14 @@ export default function Koszyk(props) {
       {cartItems.length === 0 ? (
         <div></div>
       ) : (
-        <div className="cart" key={cartItems.id}>
+        <div className="cart">
           <div>
             <h3>Produkty u zestawie</h3>
           </div>
           {cartItems.map((item) => (
             <div className="cartflex" key={item.id}>
-              <div className="cart_name" key={item.id}>
-                {item.nazwa}
-              </div>
+              <div className="cart_name">{item.nazwa}</div>
               <div className="cart_qty">{item.qty} szt</div>
-              {console.log(item.typ)}
             </div>
           ))}
           <form
@@ -27,7 +24,7 @@ export default function Koszyk(props) {
             method="post"
           >
             {cartItems.map((id, key) => (
-              <>
+              <div key={key}>
                 <input
                   type="hidden"
                   name={"products[" + key + "][id]"}
@@ -38,7 +35,7 @@ export default function Koszyk(props) {
                   name={"products[" + key + "][qty]"}
                   value={id.qty}
                 ></input>
-              </>
+              </div>
             ))}
             <input className="button" type="submit" value={button_text}></input>
           </form>

@@ -166,7 +166,6 @@ function App() {
         <Koszyk
           onAdd={onAdd}
           cartItems={cartItems}
-          key={cartItems.id}
           product={filteredList}
         ></Koszyk>
       </div>

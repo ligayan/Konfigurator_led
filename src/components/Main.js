@@ -21,7 +21,6 @@ export default function Main(props) {
       {filteredList.length === 0 && cartItems.length === 0 ? (
         <div className="alert">Brak produktów Spełniających wymagania <Kontakt></Kontakt> </div>
       ) : null}
-      {console.log(filteredList)}
       <div className="cartproducts">
         {product.map((index) => (
           <Product

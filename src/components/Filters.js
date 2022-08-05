@@ -12,13 +12,32 @@ export default function Filters(props) {
     handleVChange,
     handleReset,
   } = props;
+  const tablica = {
+    ochrona: {
+      h1: "Ochrona IP",
+      p: "Testowy opis",
+    },
+    barwa: {
+      h1: "Barwa",
+      p: "Testowy opis",
+    },
+    zasilanie: {
+      h1: "Zasilanie",
+      p: "Testowy opis",
+    },
+  };
+
   return (
     <div className="filters">
       <div className="flex">
         <div className="filter_header">
           Wybór stopnia ochrony:
           <span className="info">
-            ? <div className="opis">Informacje na temat IP</div>
+            ?
+            <div className="opis">
+              <h3>{tablica.ochrona.h1}</h3>
+              <p>{tablica.ochrona.p}</p>
+            </div>
           </span>
         </div>
         <select id="ip-input" value={selectedIp} onChange={handleIpChange}>
@@ -29,9 +48,13 @@ export default function Filters(props) {
       </div>
       <div className="flex">
         <div className="filter_header">
-          Wybór barwy:{" "}
+          Wybór barwy:
           <span className="info">
-            ? <div className="opis">Informacje na temat Barwy</div>
+            ?
+            <div className="opis">
+              <h3>{tablica.barwa.h1}</h3>
+              <p>{tablica.barwa.p}</p>
+            </div>
           </span>
         </div>
         <select id="ip-input" value={selectedK} onChange={handleKChange}>
@@ -45,7 +68,11 @@ export default function Filters(props) {
         <div className="filter_header">
           Wybór rodzaju zaislania:
           <span className="info">
-            ? <div className="opis">Informacje na temat Zasilania</div>
+            ?
+            <div className="opis">
+              <h3>{tablica.zasilanie.h1}</h3>
+              <p>{tablica.zasilanie.p}</p>
+            </div>
           </span>
         </div>
         <select id="ip-input" value={selectedV} onChange={handleVChange}>
