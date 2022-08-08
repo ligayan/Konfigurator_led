@@ -18,9 +18,10 @@ export default function Main(props) {
   } = props;
   return (
     <div className="filter_products">
+      <div style={{maxwidth: "100%"}} className={`main_header ${hide ? "hide" : ""}`}>Produkty spełniające Twoje wymagania: </div>
       {filteredList.length === 0 && cartItems.length === 0 ? (
         <div className="alert">
-          Brak produktów Spełniających wymagania <Kontakt></Kontakt>{" "}
+          Brak produktów spełniających wymagania <Kontakt></Kontakt>{" "}
         </div>
       ) : null}
       <div className="cartproducts">
@@ -44,8 +45,8 @@ export default function Main(props) {
             </div>
           ) : (
             <div>
-              <div className="main_header">Wybierz zasilacz: </div>
-              <div className="main_header">
+              <div className="main_header"><strong>Wybierz zasilacz:</strong> </div>
+              <div className="main_header_h2">
                 Zalecana moc zasilacza : {wymaganaMoc} W{" "}
               </div>
               <div className="cartproducts">

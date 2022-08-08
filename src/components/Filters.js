@@ -23,7 +23,7 @@ export default function Filters(props) {
     },
     zasilanie: {
       h1: "Zasilanie",
-      p: "Testowy opis",
+      p: "Uwaga !!! Wymagany transformator/zasilacz",
     },
   };
 
@@ -66,7 +66,7 @@ export default function Filters(props) {
       </div>
       <div className="flex">
         <div className="filter_header">
-          Wybór rodzaju zaislania:
+          Wybór rodzaju zasilania:
           <span className="info">
             ?
             <div className="opis">

@@ -29,17 +29,17 @@ body {
 
 .opis {
   display: none;
-  width: 200px;
+  max-width: 70%;
   background: white;
   border: 4px double black;
-  box-shadow: 5px 5px 10px 4px gray;
+  box-shadow: 3px 3px 10px 1px gray;
   padding: 30px;
   z-index: 2;
+  color: black;
 }
 
 .info:hover .opis {
   display: block;
-  color: green;
   font-size: 25px;
   position: absolute;
   left: 40%;
@@ -101,7 +101,11 @@ select {
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-.filter_products {
+
+.main_header_h2{
+  font-size: large;
+  color: rgb(218, 32, 32);
+  margin-bottom: 15px;
 }
 
 .main_flex {
