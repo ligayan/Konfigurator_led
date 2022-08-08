@@ -4,7 +4,7 @@ export default function Zasilacz(props) {
   const { zasilacz, onAdd, button } = props;
   return (
     <div className="product">
-      <div>
+      <div className="product_inner">
         <h3>{zasilacz.nazwa}</h3>
         <button
           className="button"
@@ -14,7 +14,7 @@ export default function Zasilacz(props) {
           Wybierz
         </button>
       </div>
-      <img src={zasilacz.src} alt="fotka"></img>
+      <img src={zasilacz.src} className="product_img_inner" alt="fotka"></img>
     </div>
   );
 }
