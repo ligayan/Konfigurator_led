@@ -6,6 +6,13 @@ body {
   height: 100%;
 } */
 
+.product_inner{
+  width: 70%;
+}
+.product_img_inner{
+  width: 30%;
+}
+
 .info{
   color: rgb(255, 255, 255);
   background-color: rgb(173, 169, 169);

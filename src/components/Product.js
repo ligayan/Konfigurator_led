@@ -4,7 +4,7 @@ export default function Product(props) {
   const { product, onAdd, button, } = props;
   return (
     <div className="product">
-      <div>
+      <div className="product_inner">
         <h3>{product.nazwa}</h3>
         <button
           className="button"
@@ -16,7 +16,7 @@ export default function Product(props) {
         <div></div>
         <br></br>
       </div>
-      <img src={product.src} alt="fotka"></img>
+      <img src={product.src} className="product_img_inner" alt="fotka"></img>
     </div>
   );
 }
