@@ -56,7 +56,7 @@ export default function Main(props) {
                         moc.moc <= 45 &&
                         moc.zasilanie === selectedV
                       : moc.moc > wymaganaMoc &&
-                        moc.moc <= wymaganaMoc * 1.2 &&
+                        moc.moc <= wymaganaMoc * 1.5 &&
                         moc.zasilanie === selectedV
                   )
                   .map((index) => (
