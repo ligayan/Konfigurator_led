@@ -11,7 +11,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "15",
-      src: "img/MN-15-44.jpg",
+      src: "/img/MN-15-44.jpg",
     },
     {
       id: 116,
@@ -24,7 +24,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "15",
-      src: "img/WD-15-67.jpg",
+      src: "/img/WD-15-67.jpg",
     },
     {
       id: 118,
@@ -37,7 +37,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "15",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 101,
@@ -49,7 +49,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "24",
-      src: "img/MN-24-44.jpg",
+      src: "/img/MN-24-44.jpg",
     },
     {
       id: 104,
@@ -61,7 +61,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "30",
-      src: "img/WD-30-67.jpg",
+      src: "/img/WD-30-67.jpg",
     },
     {
       id: 124,
@@ -74,7 +74,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "30",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 102,
@@ -86,7 +86,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "36",
-      src: "img/MN-36-44.jpg",
+      src: "/img/MN-36-44.jpg",
     },
     {
       id: 106,
@@ -98,7 +98,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "45",
-      src: "img/WD-45-67.jpg",
+      src: "/img/WD-45-67.jpg",
     },
     {
       id: 119,
@@ -111,7 +111,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "45",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 105,
@@ -124,7 +124,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "60",
-      src: "img/MD-60-20.jpg",
+      src: "/img/MD-60-20.jpg",
     },
     {
       id: 115,
@@ -136,7 +136,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "60",
-      src: "img/WD-60-67.jpg",
+      src: "/img/WD-60-67.jpg",
     },
     {
       id: 117,
@@ -148,7 +148,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "60",
-      src: "img/1.jpg",
+      src: "/img/1.jpg",
     },
     {
       id: 123,
@@ -160,7 +160,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "60",
-      src: "img/zasilacz_LED_slim_bok_1.jpg",
+      src: "/img/zasilacz_LED_slim_bok_1.jpg",
     },
     {
       id: 125,
@@ -173,7 +173,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "60",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 111,
@@ -186,7 +186,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "80",
-      src: "img/MD-80-20.jpg",
+      src: "/img/MD-80-20.jpg",
     },
     {
       id: 120,
@@ -198,7 +198,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "80",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 107,
@@ -210,7 +210,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "100",
-      src: "img/WD-100-67.jpg",
+      src: "/img/WD-100-67.jpg",
     },
     {
       id: 112,
@@ -223,7 +223,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "100",
-      src: "img/MD-100-20.jpg",
+      src: "/img/MD-100-20.jpg",
     },
     {
       id: 113,
@@ -236,7 +236,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "120",
-      src: "img/MD-120-20.jpg",
+      src: "/img/MD-120-20.jpg",
     },
     {
       id: 114,
@@ -248,7 +248,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "120",
-      src: "img/WD-120-67.jpg",
+      src: "/img/WD-120-67.jpg",
     },
     {
       id: 121,
@@ -260,7 +260,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "120",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 126,
@@ -273,7 +273,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "120",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
     {
       id: 108,
@@ -285,7 +285,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "150",
-      src: "img/WD-150-67.jpg",
+      src: "/img/WD-150-67.jpg",
     },
     {
       id: 109,
@@ -298,7 +298,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "150",
-      src: "img/MD-150-20.jpg",
+      src: "/img/MD-150-20.jpg",
     },
     {
       id: 110,
@@ -311,7 +311,7 @@ const data_2 = {
       zasilanie: "12",
       qty: 0,
       moc: "200",
-      src: "img/MD-200-20.jpg",
+      src: "/img/MD-200-20.jpg",
     },
     {
       id: 122,
@@ -324,7 +324,7 @@ const data_2 = {
       zasilanie: "24",
       qty: 0,
       moc: "200",
-      src: "img/brak.jpg",
+      src: "/img/brak.jpg",
     },
   ],
 };

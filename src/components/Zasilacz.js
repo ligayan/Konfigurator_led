@@ -14,7 +14,7 @@ export default function Zasilacz(props) {
           Wybierz
         </button>
       </div>
-      <img src={zasilacz.src} className="product_img_inner" alt="fotka"></img>
+      <img src={process.env.PUBLIC_URL + zasilacz.src} className="product_img_inner" alt="fotka"></img>
     </div>
   );
 }

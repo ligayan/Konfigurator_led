@@ -40,7 +40,7 @@ export default function Main(props) {
         <div className={`lightbox ${hide ? "hide" : ""}`}>
           {filtrowanie(zasilacz).length === 0 ? (
             <div className="alert">
-              Brak zasilaczy dla wybranego napięcia <br></br>{" "}
+              Brak zasilaczy spełniających wymagania <br></br>{" "}
               <Kontakt></Kontakt>{" "}
             </div>
           ) : (

@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function Product(props) {
   const { product, onAdd, button, } = props;
   return (
@@ -16,7 +15,8 @@ export default function Product(props) {
         <div></div>
         <br></br>
       </div>
-      <img src={product.src} className="product_img_inner" alt="fotka"></img>
+      <img src={process.env.PUBLIC_URL + product.src} className="product_img_inner" alt="fotka"></img>
+
     </div>
   );
 }

@@ -76,6 +76,9 @@ html {
 img {
   max-width: 100px;
 }
+
+.alert::first-line{color: red;}
+
 .alert {
   max-width: 70%;
   text-align: center;

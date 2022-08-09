@@ -13,7 +13,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: "3000",
-      src: "img/P2835-60-20-WW-100_1.jpg",
+      src: "/img/P2835-60-20-WW-100_1.jpg",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: "4000",
-      src: "img/P2835-60-20-NW-100_1.jpg",
+      src: "/img/P2835-60-20-NW-100_1.jpg",
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: "4000",
-      src: "img/P2835-60-65-NW-5_1.jpg",
+      src: "/img/P2835-60-65-NW-5_1.jpg",
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: "3000",
-      src: "img/P2835-60-65-WW-5_1.jpg",
+      src: "/img/P2835-60-65-WW-5_1.jpg",
     },
     {
       id: 5,
@@ -73,7 +73,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "3000",
-      src: "img/PCOB-20-WW-5_1.jpg",
+      src: "/img/PCOB-20-WW-5_1.jpg",
     },
     {
       id: 6,
@@ -88,7 +88,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "4000",
-      src: "img/PCOB-20-NW-5_1.jpg",
+      src: "/img/PCOB-20-NW-5_1.jpg",
     },
     {
       id: 7,
@@ -103,7 +103,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "3000",
-      src: "img/P2835-120-60-WW-100_1.jpg",
+      src: "/img/P2835-120-60-WW-100_1.jpg",
     },
     {
       id: 8,
@@ -118,7 +118,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "4000",
-      src: "img/P2835-120-60-NW-100_01.jpg",
+      src: "/img/P2835-120-60-NW-100_01.jpg",
     },
     {
       id: 9,
@@ -133,7 +133,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "3000",
-      src: "img/P2835-120-65-WW-5_1.jpg",
+      src: "/img/P2835-120-65-WW-5_1.jpg",
     },
     {
       id: 10,
@@ -148,7 +148,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "4000",
-      src: "img/P2835-120-65-NW-5_1.jpg",
+      src: "/img/P2835-120-65-NW-5_1.jpg",
     },
     {
       id: 11,
@@ -163,7 +163,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "0",
-      src: "img/P3014-240-20-CCT-100_1.jpg",
+      src: "/img/P3014-240-20-CCT-100_1.jpg",
     },
     {
       id: 12,
@@ -178,7 +178,7 @@ const data = {
       rodzaj: "single",
       odcinek: 5,
       barwa: "0",
-      src: "img/P2835-120-20-DIM-100_1.jpg",
+      src: "/img/P2835-120-20-DIM-100_1.jpg",
     },
     {
       id: 13,
@@ -193,7 +193,7 @@ const data = {
       rodzaj: "single",
       odcinek: 4.2,
       barwa: "3000",
-      src: "img/P2835-120-65-WW-48-5_1.jpg",
+      src: "/img/P2835-120-65-WW-48-5_1.jpg",
     },
     {
       id: 14,
@@ -208,7 +208,7 @@ const data = {
       rodzaj: "single",
       odcinek: 4.2,
       barwa: "4000",
-      src: "img/P2835-120-65-NW-48-5_1.jpg",
+      src: "/img/P2835-120-65-NW-48-5_1.jpg",
     },
     {
       id: 15,
@@ -223,7 +223,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "3000",
-      src: "img/P5050-120-20-WW-100_1.jpg",
+      src: "/img/P5050-120-20-WW-100_1.jpg",
     },
     {
       id: 16,
@@ -238,7 +238,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "4000",
-      src: "img/P5050-120-20-NW-100_1.jpg",
+      src: "/img/P5050-120-20-NW-100_1.jpg",
     },
     {
       id: 17,
@@ -253,7 +253,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "3000",
-      src: "img/P2835-120-65-WW-5_1.jpg",
+      src: "/img/P2835-120-65-WW-5_1.jpg",
     },
     {
       id: 18,
@@ -268,7 +268,7 @@ const data = {
       rodzaj: "single",
       odcinek: 2.5,
       barwa: "4000",
-      src: "img/P5050-120-65-NW-5_1.jpg",
+      src: "/img/P5050-120-65-NW-5_1.jpg",
     },
     {
       id: 19,
@@ -283,7 +283,7 @@ const data = {
       rodzaj: "rgb",
       odcinek: 5,
       barwa: "4000",
-      src: "img/P5050-60-20-RNW-100_1.jpg",
+      src: "/img/P5050-60-20-RNW-100_1.jpg",
     },
     {
       id: 20,
@@ -298,7 +298,7 @@ const data = {
       rodzaj: "rgb",
       odcinek: 5,
       barwa: "4000",
-      src: "img/P5050-60-65-RNW-5_1.jpg",
+      src: "/img/P5050-60-65-RNW-5_1.jpg",
     },
     {
       id: 21,
@@ -313,7 +313,7 @@ const data = {
       rodzaj: "single",
       odcinek: 1.5,
       barwa: "3000",
-      src: "img/P2835-210-20-WW-100_1.jpg",
+      src: "/img/P2835-210-20-WW-100_1.jpg",
     },
     {
       id: 22,
@@ -328,7 +328,7 @@ const data = {
       rodzaj: "single",
       odcinek: 1.5,
       barwa: "4000",
-      src: "img/P2835-210-20-NW-100_1.jpg",
+      src: "/img/P2835-210-20-NW-100_1.jpg",
     },
     {
       id: 23,
@@ -343,7 +343,7 @@ const data = {
       rodzaj: "rgb",
       odcinek: 5,
       barwa: "0",
-      src: "img/P5050-60-20-RCCT-100_1.jpg",
+      src: "/img/P5050-60-20-RCCT-100_1.jpg",
     },
     {
       id: 24,
@@ -358,7 +358,7 @@ const data = {
       rodzaj: "single",
       odcinek: 3.2,
       barwa: "4000",
-      src: "img/P2835-256-20-NW-100_1.jpg",
+      src: "/img/P2835-256-20-NW-100_1.jpg",
     },
   ],
 };
