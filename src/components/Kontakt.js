@@ -11,6 +11,11 @@ export default function Kontakt(props) {
       <h4>
         <a href="mailto:sklep@inergia.pl">sklep@inergia.pl</a>
       </h4>
+      <img
+          className="logo"
+          src={process.env.PUBLIC_URL + `/img/logo_inergia.png`}
+          alt="Logo"
+        />
     </div>
   );
 }

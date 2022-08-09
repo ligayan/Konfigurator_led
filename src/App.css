@@ -6,6 +6,21 @@ body {
   height: 100%;
 } */
 
+.header_inner{
+  display: flex;
+  align-items:flex-end;
+  justify-content: right;
+
+
+}
+
+img.logo {
+  max-width: 400px;
+}
+.logo{
+  padding: 0 10px;
+}
+
 .product_inner{
   width: 70%;
 }
@@ -83,7 +98,7 @@ img {
   max-width: 70%;
   text-align: center;
   font-size: x-large;
-  padding: 15vh;
+  padding: 10vh;
   border: 2px solid;
   margin: auto;
   background-color: #cfe7f7;
