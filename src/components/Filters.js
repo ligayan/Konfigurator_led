@@ -31,7 +31,7 @@ export default function Filters(props) {
     <div className="filters">
       <div className="flex">
         <div className="filter_header">
-          Wybór stopnia ochrony:
+          Wybór stopnia ochrony: 
           <span className="info">
             ?
             <div className="opis">
