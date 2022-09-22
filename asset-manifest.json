@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Konfigurator_led/static/css/main.f8a546d5.css",
-    "main.js": "/Konfigurator_led/static/js/main.22bc7a0f.js",
+    "main.js": "/Konfigurator_led/static/js/main.e7905ad6.js",
     "static/js/787.e97a504b.chunk.js": "/Konfigurator_led/static/js/787.e97a504b.chunk.js",
     "index.html": "/Konfigurator_led/index.html",
     "main.f8a546d5.css.map": "/Konfigurator_led/static/css/main.f8a546d5.css.map",
-    "main.22bc7a0f.js.map": "/Konfigurator_led/static/js/main.22bc7a0f.js.map",
+    "main.e7905ad6.js.map": "/Konfigurator_led/static/js/main.e7905ad6.js.map",
     "787.e97a504b.chunk.js.map": "/Konfigurator_led/static/js/787.e97a504b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8a546d5.css",
-    "static/js/main.22bc7a0f.js"
+    "static/js/main.e7905ad6.js"
   ]
 }
