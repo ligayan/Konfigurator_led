@@ -47,7 +47,7 @@ export default function Main(props) {
             <div>
               <div className="main_header"><strong>Wybierz zasilacz:</strong> </div>
               <div className="main_header_h2">
-                Zalecana moc zasilacza : {wymaganaMoc} W{" "}
+                Zalecana minimalna moc zasilacza : {wymaganaMoc} W{" "}
               </div>
               <div className="cartproducts">
                 {zasilacz
